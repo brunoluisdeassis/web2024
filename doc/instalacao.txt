@@ -1,0 +1,17 @@
+Apos criar a pasta com, iniciar o projeto NodeJS;
+
+npm init --yes
+
+Instalar modulo no MySQL 
+npm install mysql 
+
+acrescenta o tipo "modulo" em package.json (abaixo do main)
+
+instala express para criar servidor  atraves do comando:
+ npm install express
+
+ Instalar modulo nodemon para reiniciar o servidor 
+ npm install nodemon 
+
+ Em scripts{} adicionar nodemon servidor/servidor.js e agora para rodar o servidor usamos:
+ npm run dev

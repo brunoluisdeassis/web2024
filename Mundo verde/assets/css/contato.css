@@ -1,0 +1,125 @@
+.painel {
+    background-color: var(--cor-cinza-escuro);
+    height: 275px;
+}
+
+.conteudo {
+    width: 600px;
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+    color: var(--cor-branco);
+    cursor: default;
+    user-select: none;
+    z-index: 0;
+}
+
+.conteudo h2 {
+    display: inline; /* display inline obriga o elemnto a ocupar somente o espaço do conteudo*/
+    font-size: 32px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--cor-dourado);
+}
+
+.conteudo p {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.conteudo a {
+    background-color: var(--cor-verde-limao);
+    color: var(--cor-branco);
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.conteudo a:hover {
+    background: var(--cor-dourado);
+    padding: 1.1em;
+}
+
+.container {
+    width: 800px;
+    margin-inline: auto;
+    /*centraliza o container em relaçao a tela*/
+    display: flex;
+}
+
+form {
+    width: 100%;
+    padding: 40px;
+    border: 1px solid var(--cor-cinza-claro);
+    border-radius: 10px;
+    box-shadow: 12px 12px 12px var(--cor-cinza-claro);
+    background-color: var(--cor-branco);
+    margin: -30px 0 -40px;
+    z-index: 1;
+}
+
+form label {
+    display: block; /* muda de inline para block, diz para o conteudo ocupar todo o espaço horizontalmente*/ 
+    font-size: 22px;
+    color: var(--cor-texto);
+    margin: 10px 0px 10px 0px;
+}
+
+form > input, textarea {
+    width: 100%;
+    font-size: 22px;
+    color: var(--cor-texto);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-cinza-claro);
+    border-radius: 10px;
+    outline-color: var(--cor-verde-limao);
+}
+
+form > textarea {
+    max-width: 95%;
+    min-height: 100px;
+    max-height: 300px;
+
+}
+
+form > fieldset {
+    /*margin vertical = block*/
+    margin-block: 20px;
+}
+
+form > fieldset select {
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* seleciona o label  contando os elementos a partir do final do form (last = ultimo) */
+form > label:nth-last-child(2) {
+    margin-block: 20px;
+}
+
+form > button {
+    width: 35%;
+    padding: 15px 0;
+    margin-left: 12px;
+    background: var(--cor-verde-limao);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s all;
+
+}
+
+
+form > button:hover {
+    background: var(--cor-dourado);
+
+    /* Aumenta o botao em 20%*/
+    transform: scale(1,2);
+}

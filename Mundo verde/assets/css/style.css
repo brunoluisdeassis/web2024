@@ -1,0 +1,114 @@
+/* Variaveis CSS globais. ROOT significa local para voce definir as variaveis */
+
+:root {
+    --cor-neve: #fdfdfd;
+    --cor-verde-claro: #e3fbe3; 
+    --cor-verde-transparente: #e3fbe380; 
+    --cor-verde-musgo: rgb(30,130,30);
+    --cor-verde-limao: limegreen;
+    --cor-preto: #000;
+    --cor-branco: #ffffff;
+    --cor-cinza: #aaaaaa;
+    --cor-cinza-escuro: #000000bf;
+    --cor-cinza-claro: #dcdcdc;
+    --cor-dourado: #eb783f;
+
+    --altura-titulo: 2em; 
+    --altura-subtitulo: 1.5em;
+
+}
+
+body {
+    background-color: var(--cor-neve);
+}
+
+header {
+    background-color: var(--cor-verde-claro);
+    padding-block: 16px;
+    padding-inline: 16px;
+}
+
+nav {
+    height: 175px;
+    max-width: 1280px;
+    margin-inline: auto;
+
+    /* ativa layout flex box: padrao = alinhamento horizontal = row*/
+    display: flex; 
+
+    /*divide o espaçamento horizontal*/
+    justify-content: space-between;
+
+    /*divide o espaçamento vertical. obs: só é possivel centralizar pq ele tem uma altura definida*/ 
+    align-items: center;
+}
+
+/* configura o menu do header*/
+
+nav ul {
+  display: flex;
+  gap: 32px; 
+  list-style: none; /* ja esta sendo resetado em reset.css, remove os bullets da lista*/
+  user-select: none;
+}
+
+/*Configura o link do menu*/
+nav ul a {
+    color: var(--cor-preto);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none; /*remove o underline do texto do link*/
+    text-transform: uppercase; /*Transforma tudo em maiusculo*/ 
+}
+
+
+/**/
+
+nav ul a:hover {
+    color: var(--cor-dourado);
+    text-decoration: underline;
+}
+
+/*main {
+    background-color: red;
+    height: 50vh; Viewport Height
+} */
+
+footer {
+    text-align: center;
+    background-color: aqua;
+    background: url('../img/bg.png');
+
+}
+
+footer p {
+    color: var(--cor-branco);
+    font-size: 13px;
+    margin-top: 16px;
+    cursor: default;
+    user-select: none;
+}
+.banner {
+   width: 100vw; /*Viewport Weight*/
+}
+
+
+@media only screen and (max-width: 800px) {
+    nav {
+        justify-content: right;
+    }
+    nav ul {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+
+        flex-direction: column;
+        gap: 8px;
+        background: var(--cor-verde-transparente);
+        padding: 5px;
+        border: 1px solid var(--cor-verde-limao);
+        border-radius: 10px;
+
+    }
+
+}
